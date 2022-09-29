@@ -2,7 +2,7 @@ import express = require('express')
 const sendSuccess = require('../../helpers/sendSuccess')
 const sendNotFound = require('../../helpers/sendNotFound')
 
-const { operationsNotes } = require('../../repositories/operationsNotes')
+const operationsNotes = require('../../repositories/operationsNotes')
 
 const ctrListNotes = async (req: express.Request, res: express.Response) => {
   const result = await operationsNotes.listNotes()

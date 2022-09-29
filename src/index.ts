@@ -1,5 +1,4 @@
 import express = require('express')
-const Joi = require('joi')
 const initNotes = require('./repositories/init')
 const PORT = process.env.PORT || 5000
 

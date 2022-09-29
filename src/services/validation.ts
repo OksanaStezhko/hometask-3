@@ -1,7 +1,7 @@
 import express = require('express')
-const { noteIdSchema } = require('../joiSchemas')
-const sendBadRequest = require('../../helpers/sendBadRequest')
-const { isEmpty } = require('../helpers')
+const noteIdSchema = require('../joiSchemas/noteId')
+const sendBadRequest = require('../helpers/sendBadRequest')
+const isEmpty = require('../helpers/isEmpty')
 type TSchema = {
   validate: Function
 }

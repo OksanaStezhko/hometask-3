@@ -1,8 +1,12 @@
-import express from 'express';
-import initNotes from './repositories/init';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express = require("express");
+const initNotes = require('./repositories/init');
 const PORT = process.env.PORT || 5000;
-import notesRouter from './routes/api/notes';
-import reportsRouter from './routes/api/reports';
+// import notesArray from '../repositories/notes.json'
+// import notesInitArray from '../repositories/notesInit.json'
+const notesRouter = require('./routes/api/notes');
+const reportsRouter = require('./routes/api/reports');
 const app = express();
 app.use(express.json());
 app.use('/api/notes/stats', reportsRouter);

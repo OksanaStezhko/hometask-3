@@ -1,6 +1,7 @@
-import { Router } from 'express';
-import controllerWrapper from '../../services/controllerWrapper.js';
-import * as reportsController from '../../services/controllers/reports.js';
-const router = Router();
-router.get('/', controllerWrapper(reportsController.reportStats));
-export default router;
+"use strict";
+const express = require('express');
+const controllerWrapper = require('../../services/controllerWrapper');
+const reportsController = require('../../services/controllers/reports');
+const router = express.Router();
+router.get('/', controllerWrapper(reportsController.ctrReportStats));
+module.exports = router;

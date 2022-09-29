@@ -1,4 +1,6 @@
-import Joi from 'joi';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Joi = require("joi");
 const nodeUpdateSchema = Joi.object({
     name: Joi.string().max(30).optional(),
     created: Joi.date().optional(),
@@ -8,4 +10,4 @@ const nodeUpdateSchema = Joi.object({
     content: Joi.string().max(300).optional(),
     archived: Joi.boolean().optional(),
 });
-export default nodeUpdateSchema;
+module.exports = nodeUpdateSchema;

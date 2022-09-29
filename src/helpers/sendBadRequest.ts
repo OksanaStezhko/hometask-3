@@ -1,5 +1,5 @@
 import express = require('express')
-const { isEmpty } = require('./isEmpty')
+const isEmpty = require('./isEmpty')
 
 const sendBadRequest = (
   req: express.Request,
@@ -15,4 +15,4 @@ const sendBadRequest = (
   })
 }
 
-module.exports = { sendBadRequest }
+module.exports = sendBadRequest

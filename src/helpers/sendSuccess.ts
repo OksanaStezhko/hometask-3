@@ -11,4 +11,4 @@ const sendSuccess = (
   })
 }
 
-module.exports = { sendSuccess }
+module.exports = sendSuccess

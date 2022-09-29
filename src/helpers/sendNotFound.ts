@@ -7,4 +7,4 @@ const sendNotFound = (res: express.Response, id: StaticRange, status = 404) => {
   })
 }
 
-module.exports = { sendNotFound }
+module.exports = sendNotFound

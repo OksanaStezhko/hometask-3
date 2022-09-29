@@ -1,6 +1,6 @@
 import express = require('express')
-const { noteIdSchema } = require('../joiSchemas')
-const sendBadRequest = require('../../helpers/sendBadRequest')
+const noteIdSchema = require('../joiSchemas/noteId')
+const sendBadRequest = require('../helpers/sendBadRequest')
 
 const validationId = () => {
   return async (

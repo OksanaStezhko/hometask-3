@@ -5,4 +5,4 @@ const isEmpty = (obj: Object) => {
   return false
 }
 
-module.exports = { isEmpty }
+module.exports = isEmpty

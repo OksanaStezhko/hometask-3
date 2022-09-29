@@ -1,4 +1,6 @@
-import Joi from 'joi';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Joi = require("joi");
 const noteAddSchema = Joi.object({
     id: Joi.string().min(4).required(),
     name: Joi.string().max(30).required(),
@@ -9,4 +11,4 @@ const noteAddSchema = Joi.object({
     content: Joi.string().max(300).required(),
     archived: Joi.boolean().required(),
 });
-export default noteAddSchema;
+module.exports = noteAddSchema;
