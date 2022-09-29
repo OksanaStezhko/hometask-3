@@ -1,0 +1,14 @@
+import { Router } from 'express';
+import noteAddSchema from '../../joiSchemas/noteAdd';
+import noteUpdateSchema from '../../joiSchemas/noteUpdate';
+import controllerWrapper from '../../services/controllerWrapper';
+import validationId from '../../services/validationId';
+import validation from '../../services/validation';
+import * as notesController from '../../services/controllers/notes';
+const router = Router();
+router.get('/', controllerWrapper(notesController.listNotes));
+router.get('/:id', validationId(), controllerWrapper(notesController.getNoteById));
+router.post('/', validation(noteAddSchema), controllerWrapper(notesController.addNote));
+router.delete('/:id', validationId(), controllerWrapper(notesController.removeNoteById));
+router.patch('/:id', [(validationId(), validation(noteUpdateSchema))], controllerWrapper(notesController.updateNoteById));
+export default router;
