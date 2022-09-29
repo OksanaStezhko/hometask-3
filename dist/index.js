@@ -3,8 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const initNotes = require('./repositories/init');
 const PORT = process.env.PORT || 5000;
-// import notesArray from '../repositories/notes.json'
-// import notesInitArray from '../repositories/notesInit.json'
 const notesRouter = require('./routes/api/notes');
 const reportsRouter = require('./routes/api/reports');
 const app = express();
